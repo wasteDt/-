@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>实时聊天室</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="chat-panel" aria-label="聊天窗口">
+        <header class="top-bar">
+          <div>
+            <h1>实时聊天室</h1>
+            <p id="connectionStatus">正在连接服务器...</p>
+          </div>
+          <form id="nameForm" class="name-form">
+            <input id="nameInput" maxlength="20" autocomplete="off" placeholder="输入用户名" />
+            <button type="submit">进入/改名</button>
+          </form>
+        </header>
+
+        <div class="content-grid">
+          <aside class="user-list" aria-label="在线用户">
+            <div class="side-title">
+              <span>在线用户</span>
+              <strong id="userCount">0</strong>
+            </div>
+            <ul id="users"></ul>
+          </aside>
+
+          <section class="message-area" aria-label="消息区域">
+            <div id="messages" class="messages"></div>
+            <form id="messageForm" class="message-form">
+              <input id="messageInput" maxlength="500" autocomplete="off" placeholder="先设置唯一用户名，再发送消息" disabled />
+              <button id="sendButton" type="submit" disabled>发送</button>
+            </form>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./client.js"></script>
+  </body>
+</html>

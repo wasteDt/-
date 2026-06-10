@@ -1,0 +1,16 @@
+{
+  "name": "socket-chat-assignment",
+  "version": "1.0.0",
+  "description": "Node.js + socket.io realtime multi-user chat demo.",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "smoke:test": "node scripts/smoke-test.js"
+  },
+  "dependencies": {
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.7.5"
+  },
+  "devDependencies": {}
+}
